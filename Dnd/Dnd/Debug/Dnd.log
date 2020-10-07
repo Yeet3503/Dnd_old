@@ -1,2 +1,5 @@
 ﻿  Dnd.cpp
+c:\users\ender\source\repos\dnd\dnd\dnd.cpp(32): warning C4018: '<': signed/unsigned mismatch
+c:\users\ender\source\repos\dnd\dnd\dnd.cpp(65): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\ender\source\repos\dnd\dnd\dnd.cpp(82): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   Dnd.vcxproj -> C:\Users\ender\source\repos\Dnd\Debug\Dnd.exe
