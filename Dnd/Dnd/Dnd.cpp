@@ -1,6 +1,3 @@
-// Dnd.cpp : This file contains the 'main' function. Program execution begins and ends there.
-
-
 #include <iostream>
 #include <algorithm>
 #include <cctype>
@@ -108,7 +105,7 @@ public:
 	//                0    1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17
 	//				  Str  Dex  -    -    Int  -    -    -    -    Wis  -    -    -    -    Cha  -    -    -
 	//				  Athl Acro Slei Stea Arca Hist Inve Natu Reli Anim Insi Medi Perc Surv Dece Inti Perf Pers
-	int profs[18] = { 0,   1,   2,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0 };
+	int profs[18] = { 0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0 };
 	
 	vector<int> CalcMods(int stat[])
 	{
@@ -157,7 +154,7 @@ public:
 	{
 		//lowercase
 		transform(cl.begin(), cl.end(), cl.begin(), [](unsigned char c) { return tolower(c); });
-		int clnum;
+		int clnum{};
 		//get class index
 		for (int i = 0; i < classLevels.size(); i++)
 		{
@@ -169,7 +166,7 @@ public:
 		}
 		//actually add levels
 		classLevels[clnum][0] = to_string(stoi(classLevels[clnum][0]) + times);
-		//health / feats
+		//health / feat
 		for (int i = 0; i < times; i++)
 		{
 			//todo: spell slots*/spells, WIP : features
@@ -186,17 +183,30 @@ public:
 			totallevels += stoi(classLevels[j][0]);
 		}
 		prof = floor((totallevels - 1) / 4) + 2;
-		//feats - remember to add classes to maps
-		string classname = classLevels[clnum][1];
-		vector<string> feats;
-		//gettin feats
-		if (classname == "fighter") { feats = fighterMain::LVLUP(stoi(classLevels[clnum][0]) - times, times); }
-		if (classname == "warlock") { feats = warlockMain::LVLUP(stoi(classLevels[clnum][0]) - times, times); }
+		//
 
-		for (int i = 0; i < feats.size(); i++)
-		{
-			allfeats.push_back(feats[i]);
-		}
+
+
+		//DLL SHIT HERe
+
+
+
+
+		////feats - remember to add classes to maps
+		//string classname = classLevels[clnum][1];
+		//vector<string> feats;
+		////gettin feats
+		//if (classname == "fighter") { feats = fighterMain::LVLUP(stoi(classLevels[clnum][0]) - times, times); }
+		//if (classname == "warlock") { feats = warlockMain::LVLUP(stoi(classLevels[clnum][0]) - times, times); }
+		
+
+		//for (int i = 0; i < feats.size(); i++)
+		//{
+		//	allfeats.push_back(feats[i]);
+		//}
+
+
+		//
 		
 	}
 
@@ -308,7 +318,6 @@ public:
 	}
 };
 
-
 int main()
 {
 	srand(time(NULL));
@@ -318,7 +327,7 @@ int main()
 	{
 		uno.Stats[i - 10] = i;
 	}
-
+	//UPDATE TO DLL SHIT
 	uno.InitClass(fighterMain::IN(), 0);
 
 	uno.PrintStats();
@@ -327,21 +336,15 @@ int main()
 
 	while (!done)
 	{
-		vector<vector<int>> rout;
+
 		vector<char> command;
 		char strcommandchar[100];
 		cin.getline(strcommandchar, sizeof(strcommandchar));
 		string strcommand = string(strcommandchar);
 
-		/*char input[50];
-		cin.getline(input, sizeof(input));
+		//roll var
+		vector<vector<int>> rout;
 
-		for (int i = 0; i < sizeof(input); i++)
-		{
-			if (input[i] == NULL) { break; }
-			command.push_back(input[i]);
-			strcommand += input[i];
-		}*/
 
 		if (strcommand == "char" || strcommand == "sheet")
 		{
@@ -478,24 +481,11 @@ int main()
 					break;
 				}
 			}
-			//print
-			/*for (int i = 0; i < args.size(); i++)
-			{
-				std::cout << args[i];
-			}*/
 			//call func
 			rout = roll(args[0],args[1],args[2],args[3]);
 			//print output
-			for (int i = 0; i < rout.size(); i++)
-			{
-				std::cout << "roll set #" << i << endl;
-				for (int j = 0; j < rout[i].size(); j++)
-				{
-					std::cout << rout[i][j] << endl;
-				}
-			}
 			std::cout << "rolling ";
-			std::cout << args[0] << "d" << args[1] << " (" << rout[0][0] - args[2] << ") " << " + " << args[2] << " = " << rout[0][0] << endl;
+			std::cout << args[0] << "d" << args[1] << " (" << rout[0][0] - args[2] << ")" << " + " << args[2] << " = " << rout[0][0] << endl;
 		}
 		else if (strcommand == "stop")
 		{

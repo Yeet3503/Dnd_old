@@ -1,16 +1,13 @@
 ﻿  Dnd.cpp
-C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(120,19): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
+C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(117,19): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(138,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(162,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(184,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(188,39): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(196,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(314,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(369,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(498,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(500,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(135,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(159,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(181,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(185,39): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(323,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\heyyo\source\repos\Dnd\Dnd\Dnd.cpp(373,22): warning C4018: '<': signed/unsigned mismatch
   Dnd.vcxproj -> C:\Users\heyyo\source\repos\Dnd\Debug\Dnd.exe
