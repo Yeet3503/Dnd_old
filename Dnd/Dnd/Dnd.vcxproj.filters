@@ -18,10 +18,19 @@
     <ClCompile Include="Dnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fighterMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="warlockMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="figher.txt">
-      <Filter>Source Files</Filter>
-    </Text>
+    <ClInclude Include="fighterMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="warlockMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
